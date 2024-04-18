@@ -2,13 +2,13 @@ This function corrects motion artifacts in time series data using spline interpo
 
 Inputs:
 
-	timeSeriesData: Matrix of input data (time points x channels)
+	timeSeriesData: Matrix of input data (time points x channels).
 	acquisitionFrequency: Sampling frequency of the data acquisition system.
 	threshold: Motion detection threshold.
 	K: Free parameter for motion correction (leave empty for default. Default: 2.5*acquisitionFrequency).
 Outputs:
 
-	correctedData: Motion-corrected time series.
+	correctedData: Motion-corrected time series (time points x channels).
 
 The algorithm follows the procedure found in,
 
