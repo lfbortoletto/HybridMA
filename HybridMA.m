@@ -8,12 +8,16 @@
 %   timeSeriesData: Matrix of input data (time points x channels)
 %   acquisitionFrequency: Sampling frequency of the data acquisition
 %       system.
-%   threshold: Motion detection threshold.
+%   splineThreshold: Motion detection identification threshold.
+%   waveletThreshold: Parameter used to compute the statistics (iqr = 1.5 is 1.5 times the
+%        interquartile range and is usually used to detect outliers). 
+%        Increasing it, it will delete fewer coefficients.
+%        If iqr<0 then this function is skipped. 
 %   K: Free parameter for motion correction (leave empty for default. Default: 2.5*acquisitionFrequency).
 %
 % Outputs:
 %   hybridCorrectedData: Motion-corrected time series by hybrid approach, using spline and wavelet 
-%       combination.
+%       combination (time points x channels).
 %
 % Created by: S. L. Novi (2017/08/01)
 %
