@@ -11,8 +11,10 @@ Outputs:
 
 	hybridCorrectedData: Motion-corrected time series by hybrid approach, using spline and wavelet combination (time points x channels).
 
-The algorithm follows the procedure found in,
+The algorithm follows the procedures found in,
 
 Sergio L. Novi, Erin Roberts, Danielle Spagnuolo, Brianna M. Spilsbury, D'manda C. Price, Cara A. Imbalzano, Edwin Forero, Arjun G. Yodh, Glen M. Tellis, Cari M. Tellis, Rickson C. Mesquita, "Functional near-infrared spectroscopy for speech protocols: characterization of motion artifacts and guidelines for improving data analysis," Neurophoton. 7(1) 015001 (10 January 2020) https://doi.org/10.1117/1.NPh.7.1.015001
 
-Please cite this work when using any of the codes.
+Behnam Molavi, Guy A Dumont, "Wavelet-based motion artifact removal for functional near-infrared spectroscopy," Physiol. Meas. 33 259. (25 January 2012) https://doi.org/10.1088/0967-3334/33/2/259
+
+Please cite these works when using any of the codes.
