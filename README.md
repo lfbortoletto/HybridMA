@@ -1,14 +1,15 @@
-This function corrects motion artifacts in time series data using spline interpolation. The function identifies segments where motion artifacts exceed a specified threshold and applies a spline-based correction.
+HybridMA function corrects motion artifacts in time series data using a combination of spline interpolation and a filter based on the wavelet transform. The function identifies segments where motion artifacts exceed a specified threshold and applies a spline-based correction. Then, the spline corrected data is decomposed into wavelets, by wavelet transform, and coefficients are filtered based on wavelet threshold.
 
 Inputs:
 
 	timeSeriesData: Matrix of input data (time points x channels).
 	acquisitionFrequency: Sampling frequency of the data acquisition system.
-	threshold: Motion detection threshold.
+	splineThreshold: Motion detection identification threshold.
+ 	waveletThreshold: Parameter used to compute the statistics (iqr = 1.5 is 1.5 times the interquartile range and is usually used to detect outliers). Increasing it, it will delete fewer coefficients. If iqr<0 then this function is skipped. 
 	K: Free parameter for motion correction (leave empty for default. Default: 2.5*acquisitionFrequency).
 Outputs:
 
-	correctedData: Motion-corrected time series (time points x channels).
+	hybridCorrectedData: Motion-corrected time series by hybrid approach, using spline and wavelet combination (time points x channels).
 
 The algorithm follows the procedure found in,
 
