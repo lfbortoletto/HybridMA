@@ -22,9 +22,9 @@
 % Created by: S. L. Novi (2017/08/01)
 %
 % Last Modified by:
-%   L. F. Bortoletto (2024/04/18): code structure optimization.
+%   L. F. Bortoletto (2024/04/18): adapted to allow multiple time series at once.
 %   L. F. Bortoletto (2024/04/23): add wavelet to motion correction.
-% -------------------------------------------------------------------------
+% -------------------------------------------------------------------------------------------------
 
 function hybridCorrectedData = HybridMA(timeSeriesData, acquisitionFrequency, splineThreshold, waveletThreshold, K)
     if isempty(K)
